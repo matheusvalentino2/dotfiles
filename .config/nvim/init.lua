@@ -1,0 +1,33 @@
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable",
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
+
+require("lazy").setup({
+    {
+      "folke/tokyonight.nvim",
+      lazy = false,
+      priority = 1000,
+      opts = {
+        style = "storm",
+        transparent = true,
+        on_highlights = function(hl, c)
+          hl.Visual = { bg = "#ff9e64", fg = "#000000" }
+        end,
+      },
+      config = function(_, opts)
+        require("tokyonight").setup(opts)
+        vim.cmd([[colorscheme tokyonight]])
+      end,
+    },
+  })
+
+vim.opt.clipboard = "unnamedplus"

@@ -1,0 +1,7 @@
+cursor-style = block
+shell-integration-features = no-cursor, ssh-terminfo
+
+background = black
+background-image = /Users/fajar-miharja/Downloads/jeger.png
+background-image-fit = cover
+background-image-opacity = 0.25
