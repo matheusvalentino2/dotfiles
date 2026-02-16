@@ -1,1 +1,2 @@
 theme = "a"
+editor.default-yank-register = "+"
