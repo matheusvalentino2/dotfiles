@@ -1,4 +1,11 @@
 [terminal.shell]
-program = "/usr/bin/fish"
+program = "tmux"
+args = ["new-session", "-A", "-s", "main"]
 [env]
 SHELL = "/usr/bin/fish"
+
+[window]
+opacity = 0.85
+
+[font.normal]
+family = "MesloLGM Nerd Font"
