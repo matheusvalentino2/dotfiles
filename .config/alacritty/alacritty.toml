@@ -5,7 +5,7 @@ args = ["new-session", "-A", "-s", "main"]
 SHELL = "/usr/bin/fish"
 
 [window]
-opacity = 0.85
+opacity = 0.8
 
 [font.normal]
 family = "MesloLGM Nerd Font"
